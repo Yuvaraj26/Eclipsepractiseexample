@@ -12,10 +12,10 @@ public class Driverexamples {
 		driver.get("https://www.childrensplace.com");
 		String e=driver.getCurrentUrl();
 		String f=driver.getPageSource(); 
-		String g=driver.getTitle();
+		String h=driver.getTitle();
 		System.out.println(e);
 		System.out.println(f);
-		System.out.println(g);
+		System.out.println(h);
 		
 		
 
