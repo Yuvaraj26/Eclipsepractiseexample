@@ -32,9 +32,9 @@ public class timeoutexample {
 		//close browser
 		driver.close();
 	}
-	}
+	
 
 
 	}
 
-}
+
