@@ -26,9 +26,7 @@ public class Fluentwaitexample {
 		public WebElement apply(WebDriver driver) {
 			return driver.findElement(By.xpath("//h4[contains(text(),'Hello World!')]"));
 		}
-	
-	
-
 	});
+	System.out.println(driver.findElement(By.xpath("//h4[contains(text(),'Hello World!')]")).isDisplayed());
 	}
 }
