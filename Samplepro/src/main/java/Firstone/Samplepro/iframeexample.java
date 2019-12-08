@@ -5,6 +5,8 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebDriver.TargetLocator;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.interactions.Action;
+import org.openqa.selenium.interactions.Actions;
 
 public class iframeexample {
 	public static void main (String args[]) throws InterruptedException
@@ -13,9 +15,40 @@ public class iframeexample {
 	System.setProperty("webdriver.chrome.driver","/Users/yuvarajk/Downloads/chromedriver");
 	//.ChromeDriver d=new ChromeDriver();
 	driver = new ChromeDriver();
-	driver.get("https://www.toolsqa.com/iframe-practice-page/");
-	driver.manage().window().maximize();
-	Thread.sleep(6000);
+	driver.get("https://jqueryui.com/droppable/");
+	//to find number of iframe in the page
+		System.out.println(driver.findElements(By.tagName("iframe")).size());
+		/*
+		 * Frame switch through index 
+		 * driver.switchTo().frame(0);
+		 */
+		
+		  //Frame switch through "WebDriver frame(WebElement frameElement)";
+		  driver.switchTo().frame(driver.findElement(By.className("demo-frame")));
+		 
+		/*Frame switch through ID
+		driver.switchTo().frame("Framenname");*/
+		  
+	driver.findElement(By.id("draggable")).click();
+	//Drag and drop Web element
+	Actions a=new Actions(driver);
+	WebElement source=driver.findElement(By.id("draggable"));
+	WebElement target=driver.findElement(By.id("droppable"));
+	a.dragAndDrop(source, target).build().perform();
+	//return back to main window from iframe
+	driver.switchTo().defaultContent();
+//Switc from cilld iframe to previoud parent iframe
+	driver.switchTo().parentFrame();
+
+	
+		
+		
+	
+		/*
+		 * driver.get("https://www.toolsqa.com/iframe-practice-page/");
+		 * driver.manage().window().maximize(); Thread.sleep(6000);
+		 * driver.navigate().to("google.com"); driver.manage().
+		 */
 		//Not working
 	
 		/*
