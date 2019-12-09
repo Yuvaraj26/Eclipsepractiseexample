@@ -44,7 +44,7 @@ public class Winndowdimensionexample {
 	System.out.println(a);
 	LogEntries e=driver.manage().logs().get("client");
 	System.out.println(e);
-	 
+	
 	
 			
 
