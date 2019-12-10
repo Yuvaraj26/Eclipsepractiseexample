@@ -16,9 +16,12 @@ import org.openqa.selenium.WebDriverException;
 import org.openqa.selenium.WebDriverInfo;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.html5.Location;
 import org.openqa.selenium.remote.RemoteWebDriver;
 
 import com.gargoylesoftware.htmlunit.javascript.configuration.WebBrowser;
+
+import mx4j.tools.i18n.I18NStandardMBean;
 
 public class Capabilityexample {
 	public static void main (String args[]) throws InterruptedException
@@ -27,12 +30,29 @@ public class Capabilityexample {
 	System.setProperty("webdriver.chrome.driver","/Users/yuvarajk/Downloads/chromedriver");
 	//.ChromeDriver d=new ChromeDriver();
 	driver = new ChromeDriver();
+	driver.get("https://www.google.com");
 	Capabilities h=((RemoteWebDriver)driver).getCapabilities();
 	String browsername=h.getBrowserName();
 	String Version=h.getVersion();
 	System.out.println(browsername +  Version);
 	Platform platform=h.getPlatform();
 	System.out.println(platform);
+	Location l1= new Location(0, 1, 2);
+	Double e=l1.getAltitude();
+	//Double f =I1
+	
+	
+	System.out.println(e);
+	
+		/*
+		 * WebDriverInfo Wifi=(WebDriverInfo) new ChromeDriver(); String
+		 * e=Wifi.getDisplayName(); System.out.println(e);
+		 */
+//String D=((WebDriverInfo)driver).getDisplayName();
+		/*
+		 * System.out.println(D); System.out.println(h);
+		 */
+			
 	
 	}
 }
