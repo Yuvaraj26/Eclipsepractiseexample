@@ -25,6 +25,7 @@ public class Handlingcalendarintravelsite {
 		Thread.sleep(1000);
 		//Selecting the date in calendar
 		driver.findElement(By.id("ctl00_mainContent_view_date1")).click();
+		driver.findElement(By.xpath("//td[contains(@class,'ui-datepicker-today')]")).click();
 		//Not working need to check later
 		//driver.findElement(By.xpath("//a[@class='ui-state-default.ui-state-highlight.ui-state-active']")).click();
 		driver.quit();

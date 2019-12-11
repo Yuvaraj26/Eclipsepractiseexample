@@ -21,8 +21,8 @@ public class E2Efortouristsite {
 		driver.findElement(By.xpath("(//a[@value='MAA'])[2]")).click();
 		
 		  Thread.sleep(2000); 
-		  //Calendar is not selected
-//		  driver.findElement(By.xpath( "//a[@class='ui-state-default.ui-state-highlight.ui-state-active']")).click() ;
+	
+		  driver.findElement(By.xpath("//td[contains(@class,'ui-datepicker-today')]")).click();
 //		 
 		
 		driver.findElement(By.id("ctl00_mainContent_rbtnl_Trip_1")).click();
@@ -38,6 +38,7 @@ public class E2Efortouristsite {
 		{
 			Assert.assertFalse(true);
 		}
+		Thread.sleep(1000);
 		driver.findElement(By.id("divpaxinfo")).click();
 		Select S1=new Select(driver.findElement(By.id("ctl00_mainContent_ddl_Adult")));
 		S1.selectByValue("4");
