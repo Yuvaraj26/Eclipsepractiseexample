@@ -52,6 +52,7 @@ public class E2Efortouristsite {
 		//Select by value
 			 s.selectByValue("AED");
 			 driver.findElement(By.id("ctl00_mainContent_btn_FindFlights"));
+			 
 		driver.quit();
 
 	}
