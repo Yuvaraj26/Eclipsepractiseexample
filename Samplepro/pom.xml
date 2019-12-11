@@ -38,6 +38,20 @@
     <artifactId>selenium-support</artifactId>
     <version>3.141.59</version>
 </dependency>
+
+<dependency>
+    <groupId>io.github.bonigarcia</groupId>
+    <artifactId>webdrivermanager</artifactId>
+    <version>3.7.1</version>
+</dependency>
+
+<dependency>
+    <groupId>org.seleniumhq.selenium</groupId>
+    <artifactId>selenium-firefox-driver</artifactId>
+    <version>4.0.0-alpha-3</version>
+</dependency>
+
+
     
 <!-- https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-server-standalone -->
 
