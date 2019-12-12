@@ -21,7 +21,7 @@ public class Actionclassexample {
 	a.moveToElement(driver.findElement(By.id("twotabsearchtextbox"))).click().keyDown(Keys.SHIFT).sendKeys("hello").build().perform();
 Thread.sleep(1000);
 	driver.quit();
-
+	//}
 	}
 
 }
