@@ -22,7 +22,7 @@ public class Handlinghttpscertification {
 		((Capabilities) c).merge(ch);
 		System.setProperty("webdriver.chrome.driver","/Users/yuvarajk/Downloads/chromedriver");
 		WebDriver driver=new ChromeDriver(c);
-		driver.get(url);
+		driver.get(url);//add url of the website
 		
 		
 
